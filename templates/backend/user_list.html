@@ -1,0 +1,116 @@
+{% extends "backend/base.html" %}
+{% block title %}
+<title>List of User | Admin Panel</title>
+{% endblock %}
+
+{% block content %}
+<!-- start: Content -->
+<div id="content">
+        <div class="panel box-shadow-none content-header">
+          <div class="panel-body">
+            <div class="col-md-12">
+                <h4 class="animated fadeInLeft">
+                    User <span class="fa-angle-right fa"></span> List
+                    <a href="/user/create" class="btn btn-3d btn-primary"><span class="fa fa-plus"></span> Create</a>
+                </h4>
+            </div>
+          </div>
+                {% if errors['success'] %}
+          <div class=" panel-body alert alert-success">
+
+            <div class="col-md-12">
+                <h1 class=" animated fadeInLeft label label-success">
+                    {{errors['success']}}
+                </h1>
+              </div>
+            </div>
+              {% endif  %}
+        </div>
+        
+        <div class="form-element">
+          <div class="col-md-12 padding-0">
+            <div class="col-md-12">
+              <div class="panel form-element-padding">
+                <div class="panel-heading">
+                 <h4>User Management</h4>
+                </div>
+                <br/>
+                    <table class="table table-bordered" id="list_table">
+                        <thead>
+                          <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {%for val in value %}
+
+                          <tr>
+                            <td></td>
+                            <td>{{val[1]}}</td>
+                            <td>{{val[2]}}</td>
+                            <td>
+                                
+                                  <a href="" class="btn btn-3d  btn-danger" data-toggle="modal" data-target="#myModal_{{val[0]}}"><i class="fa fa-trash"></i></a>
+
+                              <a href="/user/{{val[0]}}/edit" class="btn btn-3d  btn-primary"><i class="fa fa-pencil"></i></a>
+                            
+                              <div class="modal fade" id="myModal_{{val[0]}}" role="dialog">
+                                  <div class="modal-dialog">
+                                      <!-- Modal content-->
+                                      <div class="modal-content">
+                                          <div class="modal-header  bg bg-primary">
+                                              <h3 class="modal-title"> Delete Conformation</h3>
+                                              <button type="button" class="close" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span></button>
+                                          </div>
+                                          {% if val[0] ==  session["user_id"] %}
+                                          <div class="modal-body">
+                                              <h3>This User is active</h3>
+                                              <h3>You cannot delete it</h3>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <!-- <input type="submit"  value=" Delete !"> -->
+                                              <button type="button" class="btn btn-3d  btn-warning" data-dismiss="modal"> <span class="glyphicon glyphicon-remove"></span> Cancel ! </button>
+                                          </div>
+                                          {% else %}
+                                          <form action="/user/{{val[0]}}/delete" method="POST">
+                                            <!-- <input type="text" name="id" value="{{val[0]}}"> -->
+
+                                          <div class="modal-body">
+                                                  <h3>Are You Sure want to delete this record?</h3>
+                                          </div>
+                                          <div class="modal-footer">
+                                            <!-- <input type="submit"  value=" Delete !"> -->
+                                              <button type="submit" class="btn btn-3d btn-danger"  name="btnCreate"> <i class="fa fa-trash"></i>  Delete !</button>
+                                              
+                                              <button type="button" class="btn btn-3d btn-warning" data-dismiss="modal"> <span class="glyphicon glyphicon-remove"></span> Cancel ! </button>
+                                          </div>
+                                        </form>
+                                {% endif %}
+
+                                      </div>
+                                  </div>
+
+                            
+                            
+                            
+                            </td>
+                          </tr>
+                          {% endfor %}
+                        </tbody>
+                         
+                       </table>
+                   
+              </div>
+            </div>
+            
+          </div>
+
+          
+      </div>
+    </div>
+  <!-- end: content -->
+
+{% endblock %}

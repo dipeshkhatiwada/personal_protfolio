@@ -1,0 +1,106 @@
+{% extends "backend/base.html" %}
+{% block title %}
+<title>Create of Project | Admin Panel</title>
+{% endblock %}
+
+{% block content %}
+<!-- start: Content -->
+<div id="content">
+        <div class="panel box-shadow-none content-header">
+          <div class="panel-body">
+            <div class="col-md-12">
+                <h4 class="animated fadeInLeft">
+                    Project <span class="fa-angle-right fa"></span> Create
+                    <a href="/project" class="btn btn-3d  btn-primary"><span class="fa fa-list"></span> List</a>
+                </h4>
+            </div>
+          </div>
+        </div>
+        <div class="form-element">
+          <div class="col-md-12 padding-0">
+            <div class="col-md-12">
+              <div class="panel form-element-padding">
+                <div class="panel-heading">
+                 <h4>Project Management</h4>
+                </div>
+                 <div class="panel-body" style="padding-bottom:30px;">
+                  <div class="col-md-12">
+                    <form action="/project/create" method="POST" enctype="multipart/form-data" id="form" novalidate="">
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label text-right">Title <span class="text text-danger">*</span></label>
+                      <div class="col-sm-10">
+                        <input type="text" name="title" class="form-control" placeholder="Enter Title" title="Enter Title" required>
+                        {% if errors["title"] != "" %}
+                              <label class="error">{{ errors["title"] }}</label>
+                            {% endif %}
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label text-right">Link <span class="text text-danger">*</span></label>
+                      <div class="col-sm-10">
+                        <input type="text" name="link" class="form-control" placeholder="Enter link" title="Enter link" required>
+                        {% if errors["link"] != "" %}
+                          <label class="error">{{ errors["link"] }}</label>
+                        {% endif %}
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label text-right">Rank <span class="text text-danger">*</span></label>
+                      <div class="col-sm-10">
+                        <input type="number" name="rank" class="form-control" placeholder="Enter Rank" title="Enter Rank" title="Enter College Address" required>
+                        {% if errors["rank"] != "" %}
+                          <label class="error">{{ errors["rank"] }}</label>
+                        {% endif %}
+                      </div>
+                    </div>
+                     <div class="form-group">
+                      <label class="col-sm-2 control-label text-right">image <span class="text text-danger">*</span></label>
+                      <div class="col-sm-10">
+                        <input type="file" name="image" class="form-control" placeholder="Enter image" title="Enter image" title="Enter College Address" required>
+                        {% if errors["image"] != "" %}
+                          <label class="error">{{ errors["image"] }}</label>
+                        {% endif %}
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label text-right">Image Title <span class="text text-danger">*</span></label>
+                      <div class="col-sm-10">
+                        <textarea name="image_title"  cols="30" rows="7" class="form-control" placeholder="Enter image title" required></textarea>
+                          {% if errors["image_title"] != "" %}
+                            <label class="error">{{ errors["image_title"] }}</label>
+                          {% endif %}
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label text-right">Status <span class="text text-danger">*</span></label>
+                      <div class="col-sm-10">
+                        <input type="radio" name="status" value="1"> Active
+                        <input type="radio" name="status" value="0" checked> Deactive
+                      </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-10">
+                          <input type="submit" class="btn ripple-infinite  btn-round btn-success" value="Save!">
+                          <input type="reset" class="btn ripple-infinite  btn-round btn-warning" value="Cancel!">
+                        </div>
+                      </div>
+                    </form>
+                    
+                    
+                        
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+
+          
+      </div>
+    </div>
+  <!-- end: content -->
+
+{% endblock %}

@@ -1,0 +1,306 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+	<title>Dipesh Khatiwada</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=" web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--// Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="/static/css/bootstrap.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="/static/css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link href="/static/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/static/asset/css/swiper.min.css" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
+	<link href="/static///fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	 rel="stylesheet">
+	<!-- //Web-Fonts -->
+	<style>
+		html, body {
+		  position: relative;
+		  height: 100%;
+		}
+		
+		.swiper-container {
+		  width: 100%;
+		  height: 100%;
+		}
+		.swiper-slide {
+		  text-align: center;
+		  font-size: 18px;
+		  background: #85ced6;
+
+		  /* Center slide text vertically */
+		  display: -webkit-box;
+		  display: -moz-box;
+		  display: -webkit-flex;
+		  display: flex;
+		  -webkit-box-pack: center;
+		  -ms-flex-pack: center;
+		  -webkit-justify-content: center;
+		  justify-content: center;
+		  -webkit-box-align: center;
+		  -ms-flex-align: center;
+		  -webkit-align-items: center;
+		 align-items: left; 
+		}
+		.error{
+		color: #f00;
+		}
+	  </style>
+</head>
+
+<body>
+	<!-- home -->
+	<div id="home">
+		<!-- banner -->
+		<div class="banner_w3lspvt">
+			<div class="banner-top1">
+				<div class="container">
+					<div class="banner-text text-center">
+						<h1><a href="/static/index.html" class="logo text-wh text-uppercase font-weight-light">Dipesh Khatiwada</a></h1>
+						<p class="text-bl text-li mt-3">I am experienced in Web Development. I help companies & individual around the globe to connect better with their audience.</p>
+						<div class="social-icons mt-4">
+							<ul class="list-unstyled">
+								<li>
+									<a href="https://www.facebook.com/deepaacee">
+										<span class="fa fa-facebook"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://twitter.com/depacek">
+										<span class="fa fa-twitter"></span>
+									</a>
+								</li>
+								<li>
+									<a href="https://www.instagram.com/depacek">
+										<span class="fa fa-instagram"></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a href="#about" class="btn button-style mt-5">Read More</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //banner -->
+	</div>
+	<!-- //home -->
+
+	<!-- header -->
+	<header class="py-2">
+		<div class="container d-flex">
+			<h4 class="mt-2 let">My Profile</h4>
+			<!-- menu -->
+		
+			<!-- //menu -->
+		</div>
+	</header>
+	<!-- //header -->
+
+	<!-- about -->
+	<section class="about py-5 position-relative" id="about">
+		<div class="container pt-lg-4 pb-4">
+			<h3 class="tittle-2">About Myself</h3>
+			<div class="row">
+				<div class="col-lg-6 about-img text-center">
+					<img class="img-fluid" src="/static/images/per1.png" alt="">
+				</div>
+				<div class="col-lg-6 about-right">
+					<h4 class="about-tit">Hi !<br>I'm Dipesh </h4>
+					<p class="my-4">I am originally from Kathmandu Nepal.
+						I am working on Python & Flask Framework Like Ecommerce website development,Newsportal Development, RealEstate Development, CRUD Application Development. I can Develop all types of websites.</p>
+						<p>I am experienced in Web Development. I help companies & individual around the globe to connect better with their audience.</p>
+					<a href="#hire" class="btn button-style-2 mt-5">Hire Me</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- //about -->
+	<!-- project -->
+	<section class="testimonials py-5 text-center">
+		<!-- Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+			{% for p_data in project %}
+			  <div class="swiper-slide">
+				<div class="sliderText">
+					<img src="/static/uploaded_image/{{p_data[2]}}"  style="width: 390px; margin: 10px;"  alt="fas">
+					<h3>{{p_data[1]}}</h3>
+					<a href="{{p_data[3]}}" class="btn button-style ">View Details</a>
+					<p>.</p>
+
+				</div>
+				<div class="content">
+				</div>
+			  </div>
+			{% endfor %}
+			  
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+		</div>
+	</section>
+	<!-- //project -->
+	<!-- education -->
+	<div class="middile-inner-con position-relative" id="resume">
+		<div class="container pt-lg-5">
+			<h3 class="tittle-2">My Resume</h3>
+			<div class="d-lg-flex">
+				<div class="col-lg-4 left-grid-resu">
+					<img src="/static/images/per2.png" alt="" class="img-fluid">
+				</div>
+				<div class="col-xl-7 col-lg-8 tab-main offset-xl-1 py-lg-0 py-5">
+					<input id="tab1" type="radio" name="tabs" class="w3pvt-sm" checked>
+					<label for="tab1"><span class="fa fa-graduation-cap" aria-hidden="true"></span>Education</label>
+					
+					<section id="content1">
+						{% for val in value %}
+						<div class="inner-w3pvt-wrap mt-3">
+							<h4>{{val[1]}}</h4>
+							<h6>{{val[4]}}</h6>
+							<p>{{val[2]}}, {{val[3]}}</p>
+						</div>
+						{% endfor %}
+						<div class="inner-w3pvt-wrap">
+							<h6>.</h6>
+						</div>
+					</section>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //education -->
+
+	<!-- middle section -->
+	<section class="w3ls-bnrbtm py-5 text-center">
+		<div class="container py-xl-5">
+			<div class="cont-w3pvt">
+				<h3 class="w3pvt-web-title">If you need any project plan , I am here always for you.</h3>
+				<a href="/static/CV_Binod.pdf" class="btn button-style mt-sm-5 mt-4">Download CV</a>
+			</div>
+		</div>
+	</section>
+	<!-- //middle section -->
+
+	<!-- contact -->
+	<section class="contact py-5" id="hire">
+		<div class="container py-xl-5 py-lg-3">
+			<h3 class="tittle text-center text-bl mb-sm-5 mb-4">Talk to me !</h3>
+			<div class="contact-form mx-auto text-center">
+				<form method="POST" action="/" id="form_contact" novalidate="">
+					<div class="row">
+							{% if session["msg"] %}
+				  
+							  <div class="col-md-12 bg bg-success form-group">
+								  <h1 class="label label-success">
+									  {{session["msg"]}}
+								  </h1>
+								  
+								</div>
+								<br/>
+								{% endif  %}
+						<div class="col-lg-6 form-group">
+							<input type="text" class="form-control" placeholder="Name"  title="Enter Name" name="name" required="">
+							{% if errors["name"] != "" %}
+                              <label class="error">{{ errors["name"] }}</label>
+                            {% endif %}
+						</div>
+						<div class="col-lg-6 form-group">
+							<input type="email" class="form-control" placeholder="Email" title="Enter Email" name="email" required="">
+							{% if errors["email"] != "" %}
+                              <label class="error">{{ errors["email"] }}</label>
+                            {% endif %}
+						</div>
+					</div>
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Subject" title="Enter Subject" name="subject" required="">
+						{% if errors["text"] != "" %}
+                              <label class="error">{{ errors["text"] }}</label>
+                            {% endif %}
+					</div>
+					<div class="form-group">
+						<textarea name="message" class="form-control" placeholder="Message" title="Enter Message" required=""></textarea>
+						{% if errors["message"] != "" %}
+                              <label class="error">{{ errors["message"] }}</label>
+                            {% endif %}
+					</div>
+					<button type="submit" class="btn submit-button mt-md-4 mt-3">Submit</button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<!-- //contact -->
+
+	<!-- footer -->
+	<footer class="text-center py-5">
+		<div class="container py-xl-5 py-lg-4">
+			<div class="logo-2">
+				<h2><a href="/static/index.html" class="logo text-wh text-uppercase font-weight-light">Dipesh khatiwada</a></h2>
+			</div>
+			<div class="cpy-right text-center mx-auto py-3">
+				<p class="border-top ">© 2019 Anent. All rights reserved | Design by
+					<a href="/static/http://w3layouts.com"> W3layouts.</a>
+				</p>
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+	<!-- move top icon -->
+	<a href="/static/#home" class="move-top text-center"></a>
+	<!-- //move top icon -->
+	<!-- start: Javascript -->
+<script src="/static/asset/js/jquery.min.js"></script>
+<script src="/static/asset/js/jquery.ui.min.js"></script>
+<script src="/static/asset/js/bootstrap.min.js"></script>
+	<script src="/static/asset/js/plugins/jquery.validate.min.js"></script>
+	<script src="/static/asset/js/swiper.min.js"></script>
+
+	
+	<!-- Initialize Swiper -->
+	<script>
+		var swiper = new Swiper('.swiper-container', {
+		  slidesPerView: 3,
+		  spaceBetween: 30,
+		  freeMode: true,
+		  pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		  },
+		});
+	  </script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#form_contact').validate();
+			// console.log('hello');
+		});
+	  </script>
+</body>
+
+</html>

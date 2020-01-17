@@ -1,0 +1,70 @@
+{% extends "backend/base.html" %}
+{% block title %}
+<title>Detail of Message | Admin Panel</title>
+{% endblock %}
+{% block content %}
+<!-- start: Content -->
+<div id="content">
+        <div class="panel box-shadow-none content-header">
+          <div class="panel-body">
+            <div class="col-md-12">
+                <h4 class="animated fadeInLeft">
+                    Message <span class="fa-angle-right fa"></span> List
+                    <a href="/message" class="btn btn-3d btn-primary"><span class="fa fa-list"></span> List</a>
+                </h4>
+            </div>
+          </div>
+        </div>
+        <div class="form-element">
+          <div class="col-md-12 padding-0">
+            <div class="col-md-12">
+              <div class="panel form-element-padding">
+                <div class="panel-heading">
+                 <h4>Message Management</h4>
+                </div>
+                <br/>
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>SN</th>
+                            <th>Title</th>
+                            <th>Value</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>1</th>
+                            <th>Name</th>
+                            <td>{{value[1]}}</td>
+                          </tr>
+                          <tr>
+                              <th>2</th>
+                              <th>Email</th>
+                              <td>{{value[1]}}</td>
+                          </tr>
+                          <tr>
+                              <th>3</th>
+                              <th>Subject</th>
+                              <td>{{value[2]}}</td>
+                          </tr>
+                          <tr>
+                              <th>4</th>
+                              <th>Message</th>
+                              <td>{{value[3]}}</td>
+                            </tr>
+
+                        </tbody>
+                         
+                       </table>
+                   
+              </div>
+            </div>
+            
+          </div>
+
+          
+      </div>
+    </div>
+  <!-- end: content -->
+
+{% endblock %}
